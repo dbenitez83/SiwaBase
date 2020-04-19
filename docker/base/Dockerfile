@@ -12,6 +12,7 @@ RUN wget http://apache.rediris.es/hadoop/common/hadoop-2.7.7/hadoop-2.7.7.tar.gz
     mv hadoop-2.7.7 /usr/local/hadoop && \
     rm hadoop-2.7.7.tar.gz
 
+
 # set environment variable
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 
 ENV HADOOP_HOME=/usr/local/hadoop 
@@ -56,3 +57,8 @@ EXPOSE 19888
 EXPOSE 8030 8031 8032 8033 8040 8042 8088 8188
 #Other ports
 EXPOSE 49707 2122
+EXPOSE 18080 
+# hive port
+EXPOSE 10000 9083 9999
+# Jupyter port
+EXPOSE 3333

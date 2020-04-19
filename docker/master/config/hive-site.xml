@@ -27,5 +27,22 @@ For example, jdbc:postgresql://myhost/db?ssl=true for postgres database.</descri
       <value>org.datanucleus.api.jdo.JDOPersistenceManagerFactory</value>
       <description>class implementing the jdo persistence</description>
    </property>
+	   <property>
+<name>hive.metastore.schema.verification</name>
+<value>false</value>
+</property> 
+<property>
+  <name>datanucleus.autoCreateSchema</name>
+  <value>true</value>
+</property>
+	<property>
+  <name>datanucleus.fixedDatastore</name>
+  <value>false</value>
+</property>
+<property>
+	<name>datanucleus.schema.autoCreateTables</name>
+	<value>true</value>
+</property>
 </configuration>
+
 
