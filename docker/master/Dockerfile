@@ -23,6 +23,7 @@ RUN wget https://archive.apache.org/dist/hive/hive-3.1.1/apache-hive-3.1.1-bin.t
 
 ENV HIVE_HOME=/usr/local/hive
 ENV PATH=$PATH:/usr/local/hive/bin
+ENV PYSPARK_PYTHON=python3
 
 ADD config/hive-site.xml /usr/local/hive/conf
 RUN chown root:root /usr/local/hive/conf/hive-site.xml
