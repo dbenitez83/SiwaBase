@@ -31,6 +31,7 @@ RUN mkdir -p ~/hdfs/namenode && \
 COPY config/* /tmp/
 
 RUN mv /tmp/ssh_config ~/.ssh/config && \
+    mv /tmp/sshd_config /etc/ssh/ && \
     mv /tmp/hadoop-env.sh /usr/local/hadoop/etc/hadoop/hadoop-env.sh && \
     mv /tmp/hdfs-site.xml $HADOOP_HOME/etc/hadoop/hdfs-site.xml && \ 
     mv /tmp/core-site.xml $HADOOP_HOME/etc/hadoop/core-site.xml && \
@@ -62,3 +63,5 @@ EXPOSE 18080
 EXPOSE 10000 9083 9999
 # Jupyter port
 EXPOSE 3333
+# SSH port
+EXPOSE 2202
