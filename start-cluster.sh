@@ -36,7 +36,7 @@ docker rm -f hadoop-master &> /dev/null
 
 echo "starting hadoop-master container..."
 
-sudo docker run --hostname=hadoop-master --name hadoop-master --privileged=true -itd -v "/Volumes/Disco Externo/Orion":/src -p 8888:8888 -p 8088:8088 -p 3333:3333 -p 50070:50070 -p 18080:18080 --publish-all=true --network=OrionNetwork  orion/hadoop-cluster-master
+sudo docker run --hostname=hadoop-master --name hadoop-master --privileged=true -itd -v "/Volumes/Disco Externo/Orion":/src -p 8888:8888 -p 8088:8088 -p 3333:3333 -p 50070:50070 -p 18080:18080 -p 2202:2202 --publish-all=true --network=OrionNetwork  orion/hadoop-cluster-master
 
 # get into hadoop master container
 docker exec -it hadoop-master bash
